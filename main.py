@@ -14,7 +14,7 @@ class Ui_WeldCalc(object):
         self.radioButton = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton.setGeometry(QtCore.QRect(70, 70, 141, 21))
         self.radioButton.setCheckable(True)
-        self.radioButton.setChecked(True)
+        self.radioButton.setChecked(False)
         self.radioButton.setObjectName("radioButton")
         self.radioButton_2 = QtWidgets.QRadioButton(self.centralwidget)
         self.radioButton_2.setGeometry(QtCore.QRect(300, 70, 141, 21))
@@ -142,6 +142,7 @@ class Ui_WeldCalc(object):
 
 
     def select(self):
+        self.label_6.setText("Enter value")
         if self.radioButton.isChecked():
             a = int(self.lineEdit.text()) * (math.cos(math.radians(45)))
             self.label_6.setText(f"{round(a, 5)}")
